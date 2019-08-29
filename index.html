@@ -10,6 +10,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <header>
@@ -41,10 +43,10 @@
                                      <a class="nav-link" href="#"><i class="fas fa-globe"></i> &nbsp;EN <span class="sr-only">(current)</span></a>
                                 </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="#"><i class="far fa-user"></i> &nbsp;Login &nbsp;<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#login"><i class="far fa-user"></i> &nbsp;Login &nbsp;<span class="sr-only">(current)</span></a>
                             </li>
                         </ul>
-                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign Up</button>
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#signup">Sign Up</button>
                       </form>
                     </div>
             </nav>
@@ -52,16 +54,85 @@
 
     <div class="hero-image">
             <div class="hero-text">
-              <h1 style="font-size:50px">I am John Doe</h1>
-              <p>And I'm a Photographer</p>
-              <button>Hire me</button>
+              
+                <div class="container mt-3">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" style="background-color: white;">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#earn">Earn</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#ride">Ride</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#bike">Bike</a>
+                      </li>
+                    </ul>
+                  
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div id="earn" class="container tab-pane active"><br>
+                        <div class="card" style="width:700px">
+                            <div class="card-body">
+                              <h1 class="card-title" style="color: black;">Get in the driver's seat and get paid</h1>
+                              <p style="color: black;">Drive on the largest network of active riders.</p>
+                              <a href="#" class="btn btn-primary">Sign up to drive</a>
+                              <p style="color: blue;">Learn more about driving and delivering</p>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div id="ride" class="container tab-pane fade"><br>
+                        <div class="card" style="width:700px">
+                            <div class="card-body">
+                              <h1 class="card-title" style="color: black;">Test</h1>
+                              <p style="color: black;">Drive on the largest network of active riders.</p>
+                              <a href="#" class="btn btn-primary">Sign up to drive</a>
+                              <p style="color: blue;">Learn more about driving and delivering</p>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div id="bike" class="container tab-pane fade"><br>
+                        <div class="card" style="width:700px">
+                            <div class="card-body">
+                              <h1 class="card-title" style="color: black;">Test2</h1>
+                              <p style="color: black;">Drive on the largest network of active riders.</p>
+                              <a href="#" class="btn btn-primary">Sign up to drive</a>
+                              <p style="color: blue;">Learn more about driving and delivering</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
             </div>
     </div>
 
-<div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
+
+<div class="jumbotron jumbotron-fluid">
+
+    <video autoplay muted loop poster="https://dummyimage.com/900x400/000/fff">    
+        <source src="" data-src="//clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+        <source src="" data-src="//clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm">
+        <source src="" data-src="//clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg">
+    </video>
+    
+      <div class="container text-white">
+    
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.jumbotron -->
+
+
+
   
 <div class="container">
   <div class="row">
@@ -83,5 +154,135 @@
   </div>
 </div>
 
+
+<!-- The Modal -->
+<div class="modal" id="signup">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header Sign Up-->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal Login -->
+<div class="modal" id="login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+
+
+  <footer class="mainfooter" role="contentinfo">
+      <div class="footer-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Heading 1</h4>
+              <ul class="list-unstyled">
+                <li><a href="#"></a></li>
+                <li><a href="#">Payment Center</a></li>
+                <li><a href="#">Contact Directory</a></li>
+                <li><a href="#">Forms</a></li>
+                <li><a href="#">News and Updates</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Heading 2</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Website Tutorial</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Webmaster</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Heading 3</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Parks and Recreation</a></li>
+                <li><a href="#">Public Works</a></li>
+                <li><a href="#">Police Department</a></li>
+                <li><a href="#">Fire</a></li>
+                <li><a href="#">Mayor and City Council</a></li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h4>Follow Us</h4>
+                <ul class="social-network social-circle">
+                 <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                </ul>				
+        </div>
+        </div>
+      <div class="row">
+        <div class="col-md-12 copy">
+          <p class="text-center">&copy; Copyright 2018 - Company Name.  All rights reserved.</p>
+        </div>
+      </div>
+    
+    
+      </div>
+      </div>
+    </footer>
+
+
+<script>
+    $(document).ready(function(){
+      $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+      });
+    });
+</script>
+
+<script src="./js/index.js"></script>
 </body>
 </html>
