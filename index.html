@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Ryde</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -178,16 +178,16 @@
         <!-- Modal body -->
         <div class="modal-body">
           <center>
-              <form action="">
+              <form action="" name="regform" onsubmit="return validateForm()">
                   Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="text"><br><br>
+                  <input type="text" name="uname"><br><br>
                   Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="email"><br><br>
+                  <input type="email" name="uemail"><br><br>
                   Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input type="password"><br><br>
+                  <input type="password" name="upass"><br><br>
                   Confirm Password:
-                  <input type="password"><br><br>
-                  <button type="button" class="btn btn-primary" style="padding-left: 40px; padding-right: 40px;">Sign Up</button>
+                  <input type="password" name="upassc"><br><br>
+                  <button type="submit" class="btn btn-primary" style="padding-left: 40px; padding-right: 40px;">Sign Up</button>
                 </form>
           </center>
         </div>
@@ -284,5 +284,6 @@
 </script>
 
 <script src="./js/index.js"></script>
+<script src="./js/valregister.js"></script>
 </body>
 </html>
